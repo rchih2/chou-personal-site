@@ -3,55 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>後端工程師 | [你的名字]</title>
+    <title>Visual Portfolio | 後端工程師</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); }
+        .hover-zoom { transition: transform 0.5s ease; }
+        .hover-zoom:hover { transform: scale(1.05); }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-black text-white">
 
-    <div class="max-w-4xl mx-auto px-6 py-16">
-        <!-- Header -->
-        <header class="mb-16">
-            <h1 class="text-5xl font-bold mb-4">你好，我是 <span class="text-blue-400">[你的名字]</span></h1>
-            <p class="text-xl text-gray-400">專注於高併發架構與穩定 API 的後端開發者</p>
-        </header>
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+             class="absolute inset-0 w-full h-full object-cover opacity-40" alt="background">
+        
+        <div class="z-10 text-center glass p-10 rounded-2xl border border-gray-700">
+            <h1 class="text-6xl font-black mb-4 tracking-tighter">BUILDING THE BACKEND</h1>
+            <p class="text-xl text-gray-300">Architecture • Performance • Scalability</p>
+        </div>
+    </section>
 
-        <!-- About -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-400 pl-4">關於我</h2>
-            <p class="text-gray-300 leading-relaxed">
-                我熱衷於將複雜的業務邏輯轉化為高效的代碼。擅長系統架構設計、資料庫優化以及微服務開發。
-                我不只是寫程式，更致力於解決系統瓶頸與提升使用者體驗。
-            </p>
-        </section>
-
-        <!-- Tech Stack -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-400 pl-4">技術棧</h2>
-            <div class="flex flex-wrap gap-3">
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Java / Spring Boot</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Go (Golang)</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">PostgreSQL / Redis</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Docker / Kubernetes</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">AWS / GCP</span>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section>
-            <h2 class="text-2xl font-semibold mb-8 border-l-4 border-blue-400 pl-4">精選專案</h2>
-            <div class="grid gap-6">
-                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h3 class="text-xl font-bold mb-2">高併發電商 API 系統</h3>
-                    <p class="text-gray-400 mb-4">使用 Redis 處理庫存扣減，優化 DB 鎖爭用問題，TPS 提升 300%。</p>
-                    <a href="#" class="text-blue-400 hover:underline">查看 GitHub 程式碼 →</a>
+    <!-- Project Gallery -->
+    <div class="max-w-6xl mx-auto py-20 px-6">
+        <h2 class="text-3xl font-bold mb-12 border-b border-gray-800 pb-4">開發專案與架構視覺化</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="group overflow-hidden rounded-xl border border-gray-800">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010bbbb319?auto=format&fit=crop&w=800&q=80" 
+                         class="hover-zoom w-full h-64 object-cover" alt="Project">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">微服務架構</h3>
+                    <p class="text-gray-400 text-sm">詳細描述系統設計圖與運作邏輯。</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="mt-20 pt-10 border-t border-gray-800 text-center text-gray-500">
-            <p>Email: your.email@example.com | GitHub: github.com/yourname</p>
-        </footer>
+            <!-- Project 2 -->
+            <div class="group overflow-hidden rounded-xl border border-gray-800">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1627398242454-e5619f869e5d?auto=format&fit=crop&w=800&q=80" 
+                         class="hover-zoom w-full h-64 object-cover" alt="Project">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">資料庫調優</h3>
+                    <p class="text-gray-400 text-sm">數據分析與 SQL 優化實戰紀錄。</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group overflow-hidden rounded-xl border border-gray-800">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=800&q=80" 
+                         class="hover-zoom w-full h-64 object-cover" alt="Project">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">API 負載測試</h3>
+                    <p class="text-gray-400 text-sm">使用 JMeter 進行效能壓力測試結果。</p>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

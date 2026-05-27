@@ -1,121 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>後端工程師自我介紹</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      background: #34495e;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #2c3e50;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      background: #ecf0f1;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    footer {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後端工程師 | [你的名字]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>王小明</h1>
-    <p>後端工程師 | Java & Spring Boot | 資料庫設計</p>
-  </header>
+<body class="bg-gray-900 text-gray-100 font-sans">
 
-  <nav>
-    <a href="#about">關於我</a>
-    <a href="#skills">技能</a>
-    <a href="#experience">經歷</a>
-    <a href="#projects">作品集</a>
-    <a href="#contact">聯絡方式</a>
-  </nav>
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <!-- Header -->
+        <header class="mb-16">
+            <h1 class="text-5xl font-bold mb-4">你好，我是 <span class="text-blue-400">[你的名字]</span></h1>
+            <p class="text-xl text-gray-400">專注於高併發架構與穩定 API 的後端開發者</p>
+        </header>
 
-  <section id="about">
-    <h2>關於我</h2>
-    <p>你好！我是王小明，一名熱愛後端開發的工程師，專注於 Java、Spring Boot 以及 RESTful API 設計。我喜歡解決複雜的系統問題，並且對資料庫優化與系統架構設計有濃厚興趣。</p>
-  </section>
+        <!-- About -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-400 pl-4">關於我</h2>
+            <p class="text-gray-300 leading-relaxed">
+                我熱衷於將複雜的業務邏輯轉化為高效的代碼。擅長系統架構設計、資料庫優化以及微服務開發。
+                我不只是寫程式，更致力於解決系統瓶頸與提升使用者體驗。
+            </p>
+        </section>
 
-  <section id="skills">
-    <h2>技能</h2>
-    <ul>
-      <li>Java / Spring Boot</li>
-      <li>MySQL / PostgreSQL / MongoDB</li>
-      <li>RESTful API 設計與開發</li>
-      <li>Docker / Kubernetes 基礎</li>
-      <li>Git / CI/CD 流程</li>
-    </ul>
-  </section>
+        <!-- Tech Stack -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-400 pl-4">技術棧</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Java / Spring Boot</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Go (Golang)</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">PostgreSQL / Redis</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">Docker / Kubernetes</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-blue-300">AWS / GCP</span>
+            </div>
+        </section>
 
-  <section id="experience">
-    <h2>經歷</h2>
-    <ul>
-      <li>2023–至今：某科技公司 後端工程師</li>
-      <li>2021–2023：自由接案，協助中小企業建置 API 與資料庫</li>
-      <li>2018–2021：資訊工程系畢業專題與研究</li>
-    </ul>
-  </section>
+        <!-- Projects -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-8 border-l-4 border-blue-400 pl-4">精選專案</h2>
+            <div class="grid gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-2">高併發電商 API 系統</h3>
+                    <p class="text-gray-400 mb-4">使用 Redis 處理庫存扣減，優化 DB 鎖爭用問題，TPS 提升 300%。</p>
+                    <a href="#" class="text-blue-400 hover:underline">查看 GitHub 程式碼 →</a>
+                </div>
+            </div>
+        </section>
 
-  <section id="projects">
-    <h2>作品集</h2>
-    <ul>
-      <li>電商平台後端系統：支援商品管理、訂單處理與支付 API</li>
-      <li>公司內部人事系統：整合資料庫與 REST API</li>
-      <li>個人部落格後端：使用 Spring Boot + MySQL</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>聯絡方式</h2>
-    <p>Email: backend.dev@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
-    <p>GitHub: <a href="https://github.com/example" target="_blank">github.com/example</a></p>
-  </section>
-
-  <footer>
-    <p>© 2026 王小明. All rights reserved.</p>
-  </footer>
+        <!-- Footer -->
+        <footer class="mt-20 pt-10 border-t border-gray-800 text-center text-gray-500">
+            <p>Email: your.email@example.com | GitHub: github.com/yourname</p>
+        </footer>
+    </div>
 </body>
 </html>

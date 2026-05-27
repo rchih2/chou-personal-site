@@ -1,94 +1,239 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Engineer | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .parallax { background-attachment: fixed; background-position: center; background-size: cover; }
-        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
-    </style>
-</head>
-<body class="bg-black text-white font-sans">
+    <title>後端工程師 - 自我介紹</title>
 
-    <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center relative parallax" 
-             style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80');">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="z-10 text-center px-4">
-            <h1 class="text-7xl md:text-9xl font-black mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-300">BACKEND</h1>
-            <p class="text-2xl text-gray-300 font-light tracking-widest uppercase">Designing Scalable Systems</p>
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: "Microsoft JhengHei", sans-serif;
+            background:#111;
+            color:white;
+        }
+
+        /* 主畫面 */
+        .hero{
+            height:100vh;
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+            url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero-content h1{
+            font-size:70px;
+            margin-bottom:20px;
+        }
+
+        .hero-content p{
+            font-size:24px;
+            margin-bottom:30px;
+            color:#ddd;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:15px 35px;
+            background:#00bfff;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            transition:0.3s;
+            font-size:20px;
+        }
+
+        .btn:hover{
+            background:#0099cc;
+            transform:scale(1.05);
+        }
+
+        /* 關於我 */
+        .about{
+            padding:100px 10%;
+            background:#1a1a1a;
+        }
+
+        .about h2{
+            font-size:40px;
+            margin-bottom:30px;
+            text-align:center;
+        }
+
+        .about p{
+            max-width:900px;
+            margin:auto;
+            line-height:2;
+            font-size:20px;
+            color:#ddd;
+        }
+
+        /* 技能區 */
+        .skills{
+            padding:100px 10%;
+            background:#111;
+        }
+
+        .skills h2{
+            text-align:center;
+            font-size:40px;
+            margin-bottom:50px;
+        }
+
+        .skill-box{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:#1f1f1f;
+            padding:40px;
+            border-radius:20px;
+            transition:0.3s;
+            text-align:center;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            background:#292929;
+        }
+
+        .card h3{
+            margin-bottom:20px;
+            color:#00bfff;
+        }
+
+        .card p{
+            color:#ccc;
+            line-height:1.8;
+        }
+
+        /* 頁尾 */
+        footer{
+            background:#000;
+            text-align:center;
+            padding:30px;
+            color:#777;
+        }
+
+        @media(max-width:768px){
+
+            .hero-content h1{
+                font-size:45px;
+            }
+
+            .hero-content p{
+                font-size:18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 主畫面 -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>後端工程師</h1>
+
+            <p>
+                Java ｜ MySQL ｜ Linux ｜ AWS ｜ CCNA
+            </p>
+
+            <a href="#about" class="btn">
+                關於我
+            </a>
+
         </div>
+
     </section>
 
-    <!-- Content Section -->
-    <main class="max-w-6xl mx-auto px-6 py-24">
-        
-        <!-- About Grid -->
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-32">
-            <div class="glass-card p-8 rounded-2xl">
-                <h2 class="text-4xl font-bold mb-6">關於我</h2>
-                <p class="text-gray-400 leading-relaxed text-lg">
-                    我熱衷於處理高負載流量下的數據一致性問題。從單體架構到微服務遷移，我致力於將複雜的業務邏輯簡化，並確保系統穩定性與效能。
+    <!-- 關於我 -->
+    <section class="about" id="about">
+
+        <h2>自我介紹</h2>
+
+        <p>
+            我是一位正在學習後端技術的新手工程師，
+            目前專注於 Java、MySQL、Linux 與網路技術。
+
+            因為疫情影響而轉職投入資訊領域，
+            在學習 CCNA、Linux 與程式設計過程中，
+            對後端開發產生濃厚興趣。
+
+            目前持續學習資料庫、API 與伺服器架設，
+            希望未來成為能獨立開發系統的後端工程師。
+        </p>
+
+    </section>
+
+    <!-- 技能 -->
+    <section class="skills">
+
+        <h2>技能</h2>
+
+        <div class="skill-box">
+
+            <div class="card">
+                <h3>Java</h3>
+                <p>
+                    學習 Java 基礎語法、
+                    OOP、陣列、迴圈與物件導向。
                 </p>
             </div>
-            <div class="h-64 bg-gradient-to-br from-blue-900 to-black rounded-2xl border border-blue-500/30 flex items-center justify-center">
-                <span class="text-blue-500 font-mono text-xl text-center px-10">System Architecture Design Pattern</span>
+
+            <div class="card">
+                <h3>MySQL</h3>
+                <p>
+                    了解資料表建立、
+                    CRUD、JOIN 與 SQL 基本操作。
+                </p>
             </div>
+
+            <div class="card">
+                <h3>Linux</h3>
+                <p>
+                    熟悉 Linux 指令、
+                    權限設定與基本伺服器操作。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Network</h3>
+                <p>
+                    具備 CCNA 網路基礎，
+                    了解 Router、Switch 與 TCP/IP。
+                </p>
+            </div>
+
         </div>
 
-        <!-- Tech Cards -->
-        <h2 class="text-4xl font-bold mb-12 text-center">核心技術庫</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-32">
-            <!-- Card Repeat -->
-            <div class="glass-card p-6 rounded-xl text-center hover:border-blue-500 transition-all">
-                <div class="text-4xl mb-4">🚀</div>
-                <h3 class="font-bold">Golang/Java</h3>
-            </div>
-            <div class="glass-card p-6 rounded-xl text-center hover:border-blue-500 transition-all">
-                <div class="text-4xl mb-4">💾</div>
-                <h3 class="font-bold">PostgreSQL</h3>
-            </div>
-            <div class="glass-card p-6 rounded-xl text-center hover:border-blue-500 transition-all">
-                <div class="text-4xl mb-4">🐳</div>
-                <h3 class="font-bold">Docker/K8s</h3>
-            </div>
-            <div class="glass-card p-6 rounded-xl text-center hover:border-blue-500 transition-all">
-                <div class="text-4xl mb-4">⚡</div>
-                <h3 class="font-bold">Redis/Cache</h3>
-            </div>
-        </div>
+    </section>
 
-        <!-- Projects -->
-        <h2 class="text-4xl font-bold mb-12">精選專案展示</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="group cursor-pointer">
-                <div class="h-80 overflow-hidden rounded-2xl mb-4">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <h3 class="text-xl font-bold">分佈式 API 網關</h3>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="h-80 overflow-hidden rounded-2xl mb-4">
-                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <h3 class="text-xl font-bold">即時監控系統</h3>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="h-80 overflow-hidden rounded-2xl mb-4">
-                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <h3 class="font-bold">資料庫遷移工具</h3>
-            </div>
-        </div>
-    </main>
-
-    <footer class="py-12 text-center text-gray-600 border-t border-gray-900">
-        <p>&copy; 2024 Backend Engineer Profile. Built with Passion.</p>
+    <!-- 頁尾 -->
+    <footer>
+        © 2026 Backend Engineer Portfolio
     </footer>
 
 </body>

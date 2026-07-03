@@ -1,240 +1,189 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>後端工程師 - 自我介紹</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>後端工程師 - 自我介紹</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      background: #111;
+      color: white;
+    }
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+    /* 主畫面 */
+    .hero {
+      height: 100vh;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-        body{
-            font-family: "Microsoft JhengHei", sans-serif;
-            background:#111;
-            color:white;
-        }
+    .hero-content h1 {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
 
-        /* 主畫面 */
-        .hero{
-            height:100vh;
-            background-image:
-            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-            url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4');
+    .hero-content p {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
 
-            background-size:cover;
-            background-position:center;
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: #00bfff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-size: 20px;
+    }
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-        }
+    .btn:hover {
+      background: #0099cc;
+      transform: scale(1.05);
+    }
 
-        .hero-content h1{
-            font-size:70px;
-            margin-bottom:20px;
-        }
+    /* 關於我 */
+    .about {
+      padding: 100px 10%;
+      background: #1a1a1a;
+    }
 
-        .hero-content p{
-            font-size:24px;
-            margin-bottom:30px;
-            color:#ddd;
-        }
+    .about h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-        .btn{
-            display:inline-block;
-            padding:15px 35px;
-            background:#00bfff;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            transition:0.3s;
-            font-size:20px;
-        }
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 2;
+      font-size: 20px;
+      color: #ddd;
+    }
 
-        .btn:hover{
-            background:#0099cc;
-            transform:scale(1.05);
-        }
+    /* 技能區 */
+    .skills {
+      padding: 100px 10%;
+      background: #111;
+    }
 
-        /* 關於我 */
-        .about{
-            padding:100px 10%;
-            background:#1a1a1a;
-        }
+    .skills h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
 
-        .about h2{
-            font-size:40px;
-            margin-bottom:30px;
-            text-align:center;
-        }
+    .skill-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
 
-        .about p{
-            max-width:900px;
-            margin:auto;
-            line-height:2;
-            font-size:20px;
-            color:#ddd;
-        }
+    .card {
+      background: #1f1f1f;
+      padding: 40px;
+      border-radius: 20px;
+      transition: 0.3s;
+      text-align: center;
+    }
 
-        /* 技能區 */
-        .skills{
-            padding:100px 10%;
-            background:#111;
-        }
+    .card:hover {
+      transform: translateY(-10px);
+      background: #292929;
+    }
 
-        .skills h2{
-            text-align:center;
-            font-size:40px;
-            margin-bottom:50px;
-        }
+    .card h3 {
+      margin-bottom: 20px;
+      color: #00bfff;
+    }
 
-        .skill-box{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:30px;
-        }
+    .card p {
+      color: #ccc;
+      line-height: 1.8;
+    }
 
-        .card{
-            background:#1f1f1f;
-            padding:40px;
-            border-radius:20px;
-            transition:0.3s;
-            text-align:center;
-        }
+    /* 頁尾 */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
 
-        .card:hover{
-            transform:translateY(-10px);
-            background:#292929;
-        }
-
-        .card h3{
-            margin-bottom:20px;
-            color:#00bfff;
-        }
-
-        .card p{
-            color:#ccc;
-            line-height:1.8;
-        }
-
-        /* 頁尾 */
-        footer{
-            background:#000;
-            text-align:center;
-            padding:30px;
-            color:#777;
-        }
-
-        @media(max-width:768px){
-
-            .hero-content h1{
-                font-size:45px;
-            }
-
-            .hero-content p{
-                font-size:18px;
-            }
-
-        }
-
-    </style>
-
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 45px;
+      }
+      .hero-content p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <!-- 主畫面 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>後端工程師</h1>
+      <p>Java ｜ MySQL ｜ Linux ｜ AWS ｜ CCNA</p>
+      <a href="#about" class="btn">關於我</a>
+    </div>
+  </section>
 
-    <!-- 主畫面 -->
-    <section class="hero">
+  <!-- 關於我 -->
+  <section class="about" id="about">
+    <h2>自我介紹</h2>
+    <p>
+      我是一位正在學習後端技術的新手工程師，目前專注於 Java、MySQL、Linux 與網路技術。
+      因為疫情影響而轉職投入資訊領域，在學習 CCNA、Linux 與程式設計過程中，對後端開發產生濃厚興趣。
+      目前持續學習資料庫、API 與伺服器架設，希望未來成為能獨立開發系統的後端工程師。
+    </p>
+  </section>
 
-        <div class="hero-content">
+  <!-- 技能 -->
+  <section class="skills">
+    <h2>技能</h2>
+    <div class="skill-box">
+      <div class="card">
+        <h3>Java</h3>
+        <p>學習 Java 基礎語法、OOP、陣列、迴圈與物件導向。</p>
+      </div>
+      <div class="card">
+        <h3>MySQL</h3>
+        <p>了解資料表建立、CRUD、JOIN 與 SQL 基本操作。</p>
+      </div>
+      <div class="card">
+        <h3>Linux</h3>
+        <p>熟悉 Linux 指令、權限設定與基本伺服器操作。</p>
+      </div>
+      <div class="card">
+        <h3>Network</h3>
+        <p>具備 CCNA 網路基礎，了解 Router、Switch 與 TCP/IP。</p>
+      </div>
+    </div>
+  </section>
 
-            <h1>後端工程師</h1>
-
-            <p>
-                Java ｜ MySQL ｜ Linux ｜ AWS ｜ CCNA
-            </p>
-
-            <a href="#about" class="btn">
-                關於我
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- 關於我 -->
-    <section class="about" id="about">
-
-        <h2>自我介紹</h2>
-
-        <p>
-            我是一位正在學習後端技術的新手工程師，
-            目前專注於 Java、MySQL、Linux 與網路技術。
-
-            因為疫情影響而轉職投入資訊領域，
-            在學習 CCNA、Linux 與程式設計過程中，
-            對後端開發產生濃厚興趣。
-
-            目前持續學習資料庫、API 與伺服器架設，
-            希望未來成為能獨立開發系統的後端工程師。
-        </p>
-
-    </section>
-
-    <!-- 技能 -->
-    <section class="skills">
-
-        <h2>技能</h2>
-
-        <div class="skill-box">
-
-            <div class="card">
-                <h3>Java</h3>
-                <p>
-                    學習 Java 基礎語法、
-                    OOP、陣列、迴圈與物件導向。
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>MySQL</h3>
-                <p>
-                    了解資料表建立、
-                    CRUD、JOIN 與 SQL 基本操作。
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Linux</h3>
-                <p>
-                    熟悉 Linux 指令、
-                    權限設定與基本伺服器操作。
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Network</h3>
-                <p>
-                    具備 CCNA 網路基礎，
-                    了解 Router、Switch 與 TCP/IP。
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- 頁尾 -->
-    <footer>
-        © 2026 Backend Engineer Portfolio
-    </footer>
-
+  <!-- 頁尾 -->
+  <footer>
+    © 2026 Backend Engineer Portfolio
+  </footer>
 </body>
 </html>

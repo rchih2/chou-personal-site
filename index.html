@@ -773,48 +773,50 @@
           <!-- 專案 2 -->
           <article class="project">
             <div class="project-header">
-              <div class="project-name">書籍管理與 Redis 快取優化系統書籍資料 REST API 與快取加速專案</div>
+              <div class="project-name">書籍管理 REST API 與 Redis 快取優化系統</div>
               <div class="project-meta">
                 <span>角色：個人開發</span>
                 <span>類型：學習型專案</span>
               </div>
               <div class="project-tags">
                 <span class="project-tag">Java</span>
-                <span class="project-tag">HTTP</span>
-                <span class="project-tag">JSON</span>
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Spring Data JPA</span>
+                <span class="project-tag">Redis</span>
+                <span class="project-tag">Docker Compose</span>
               </div>
             </div>
             <div class="project-body">
-         <p>
-  <strong>專案內容：</strong>
-  使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，
-  實作新增、查詢、修改、刪除等 CRUD 功能，讓前端或其他服務可以透過 HTTP 介面管理書籍資料。 
-</p>
-<p>
-  <strong>快取機制設計：</strong>
-  針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，
-  未命中時改從 MySQL 取回資料並回寫快取，以降低資料庫壓力、提升查詢效能。 [web:25][web:24]
-</p>
-<p>
-  <strong>資料一致性處理：</strong>
-  在更新與刪除書籍資料時同步清除對應的 Redis 快取，避免讀到過期資料，
-  確保 MySQL 與快取中的內容維持一致。 [web:24][web:31]
-</p>
-<p>
-  <strong>資料表管理：</strong>
-  支援 TRUNCATE TABLE 進行全表清空與主鍵 ID 重置，並在執行時同步清除相關快取資料，
-  讓資料庫與快取狀態保持乾淨一致。 [web:32][web:29]
-</p>
-<p>
-  <strong>環境部署：</strong>
-  使用 Docker Compose 整合 Spring Boot 應用程式、MySQL 與 Redis 容器，
-  建立一套一鍵啟動的開發環境，方便在不同機器上快速佈署與測試。 [web:30][web:33]
-</p>
-<p>
-  <strong>學習重點：</strong>
-  實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與
-  容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。 [web:25][web:31][web:30]
-</p>
+              <p>
+                <strong>專案內容：</strong>
+                使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，
+                實作新增、查詢、修改、刪除等 CRUD 功能，讓前端或其他服務可以透過 HTTP 介面管理書籍資料。 [web:24][web:25]
+              </p>
+              <p>
+                <strong>快取機制設計：</strong>
+                針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，
+                未命中時改從 MySQL 取回資料並回寫快取，以降低資料庫壓力、提升查詢效能。 [web:25][web:24]
+              </p>
+              <p>
+                <strong>資料一致性處理：</strong>
+                在更新與刪除書籍資料時同步清除對應的 Redis 快取，避免讀到過期資料，
+                確保 MySQL 與快取中的內容維持一致。 [web:24][web:31]
+              </p>
+              <p>
+                <strong>資料表管理：</strong>
+                支援 TRUNCATE TABLE 進行全表清空與主鍵 ID 重置，並在執行時同步清除相關快取資料，
+                讓資料庫與快取狀態保持乾淨一致。 [web:32][web:29]
+              </p>
+              <p>
+                <strong>環境部署：</strong>
+                使用 Docker Compose 整合 Spring Boot 應用程式、MySQL 與 Redis 容器，
+                建立一套一鍵啟動的開發環境，方便在不同機器上快速佈署與測試。 [web:30][web:33]
+              </p>
+              <p>
+                <strong>學習重點：</strong>
+                實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與
+                容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。 [web:25][web:31][web:30]
+              </p>
             </div>
           </article>
 
@@ -834,18 +836,16 @@
             </div>
             <div class="project-body">
               <p>
-                <strong>專案內容：</strong>在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，為日後部署後端服務做準備。
+                <strong>專案內容：</strong>在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，為日後部署後端服務做準備。 [web:30]
               </p>
               <p>
-                <strong>負責內容：</strong>建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。
+                <strong>負責內容：</strong>建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。 [web:30]
               </p>
               <p>
-                <strong>學到的重點：</strong>更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。
+                <strong>學到的重點：</strong>更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。 [web:30]
               </p>
             </div>
           </article>
-
-          <!-- TODO: 你可以在這裡繼續新增其他專案 -->
         </div>
       </section>
 
@@ -890,7 +890,7 @@
             <div class="skill-title">Network / CCNA</div>
             <div class="skill-sub">網路基礎概念</div>
             <div>
-              了解 TCP/IP 架構、Routing 與 Switch 基本運作，對 HTTP 通訊有初步理解。
+              了解 TCP/IP 架構、Routing 與 Switch 基本運作，對 HTTP 通訊有初步理解。 [web:19]
             </div>
           </div>
 
@@ -898,7 +898,7 @@
             <div class="skill-title">Git / 版本控制</div>
             <div class="skill-sub">基本指令與分支操作</div>
             <div>
-              能使用 Git 管理練習專案版本，熟悉 commit、branch 與 push 等操作。
+              能使用 Git 管理練習專案版本，熟悉 commit、branch 與 push 等操作。 [page:23]
             </div>
           </div>
 

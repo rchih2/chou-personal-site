@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>周志淮｜後端工程師作品集</title>
-  <meta name="description" content="周志淮 的後端工程師求職作品集，展示 Java、MySQL、Linux 相關專案與學習成果。" />
+  <meta name="description"
+        content="周志淮 的後端工程師求職作品集，展示 Java、MySQL、Linux 相關專案與學習成果。" />
   <style>
     :root {
       --bg: #050816;
@@ -61,8 +62,9 @@
     header {
       border-radius: 28px;
       padding: 20px 22px;
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 45%),
-                  rgba(15, 23, 42, 0.9);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 45%),
+        rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.35);
       box-shadow: 0 20px 50px rgba(15, 23, 42, 0.85);
       backdrop-filter: blur(28px);
@@ -121,7 +123,9 @@
       padding: 6px 10px;
       border-radius: 999px;
       border: 1px solid transparent;
-      transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+      transition: background var(--transition-fast),
+                  color var(--transition-fast),
+                  border var(--transition-fast);
     }
 
     nav a:hover {
@@ -153,8 +157,9 @@
     .hero-main {
       border-radius: 24px;
       padding: 24px 24px 22px;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96)),
-                  radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 55%);
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96)),
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 55%);
       border: 1px solid rgba(148, 163, 184, 0.4);
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -257,7 +262,9 @@
       align-items: center;
       gap: 6px;
       box-shadow: 0 12px 35px rgba(56, 189, 248, 0.5);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+      transition: transform var(--transition-fast),
+                  box-shadow var(--transition-fast),
+                  opacity var(--transition-fast);
     }
 
     .btn-primary span {
@@ -280,7 +287,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+      transition: background var(--transition-fast),
+                  color var(--transition-fast),
+                  border var(--transition-fast);
     }
 
     .btn-ghost:hover {
@@ -306,11 +315,12 @@
       gap: 6px;
     }
 
-    .hero-meta dot {
+    .hero-meta .dot {
       width: 5px;
       height: 5px;
       border-radius: 999px;
       background: rgba(148, 163, 184, 0.5);
+      display: inline-block;
     }
 
     .hero-side {
@@ -365,6 +375,21 @@
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.45);
       background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* 只顯示背景圖片的卡片 */
+    .hero-image-card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 180px;
     }
 
     section {
@@ -560,38 +585,30 @@
       main {
         padding-top: 20px;
       }
-
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-
       nav {
         width: 100%;
         justify-content: flex-start;
         flex-wrap: wrap;
       }
-
       .hero {
         grid-template-columns: 1fr;
       }
-
       .hero-main {
         order: 1;
       }
-
       .hero-side {
         order: 2;
       }
-
       .project {
         grid-template-columns: 1fr;
       }
-
       .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
       .contact-body {
         grid-template-columns: 1fr;
       }
@@ -601,15 +618,12 @@
       .skills-grid {
         grid-template-columns: 1fr;
       }
-
       header {
         padding: 16px 14px;
       }
-
       .hero-main {
         padding: 18px 16px 16px;
       }
-
       section {
         padding: 16px 14px 14px;
       }
@@ -641,9 +655,11 @@
             <div class="hero-kicker-dot">IN</div>
             <span>轉職中 · Backend Developer</span>
           </div>
+
           <h1 class="hero-title">Java 後端工程師｜周志淮 的求職作品集</h1>
           <p class="hero-subtitle">
-            正在累積 Java、資料庫與 Linux 實作經驗，透過具體專案練習 API、資料表設計與基礎部署，希望加入團隊一起打造穩定好維護的後端服務。
+            正在累積 Java、資料庫與 Linux 實作經驗，透過具體專案練習 API、資料表設計與基礎部署，
+            希望加入團隊一起打造穩定好維護的後端服務。
           </p>
 
           <div class="hero-tags">
@@ -654,18 +670,20 @@
           </div>
 
           <div class="hero-actions">
-            <button class="btn-primary" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+            <button class="btn-primary"
+                    onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
               立即查看專案
               <span>↓</span>
             </button>
-            <button class="btn-ghost" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+            <button class="btn-ghost"
+                    onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
               聯絡方式
             </button>
           </div>
 
           <div class="hero-meta">
-            <span><dot></dot> 對後端、系統與網路有高度興趣</span>
-            <span><dot></dot> 持續學習並整理成作品集</span>
+            <span><span class="dot"></span> 對後端、系統與網路有高度興趣</span>
+            <span><span class="dot"></span> 持續學習並整理成作品集</span>
           </div>
         </div>
 
@@ -675,11 +693,15 @@
               <span class="hero-side-title-dot"></span>
               求職目標
             </div>
-            <span style="color: var(--text-sub); font-size: 11px;">Backend / Junior Level</span>
+            <span style="color: var(--text-sub); font-size: 11px;">
+              Backend / Junior Level
+            </span>
           </div>
+
           <div class="hero-side-body">
             <p>
-              希望應徵後端工程師或具後端成分的職缺，願意從基礎任務開始，熟悉團隊開發流程與實務工具。
+              希望應徵後端工程師或具後端成分的職缺，願意從基礎任務開始，
+              熟悉團隊開發流程與實務工具。
             </p>
             <div class="hero-side-taglist">
               <span class="hero-side-tag">Java 後端</span>
@@ -687,6 +709,11 @@
               <span class="hero-side-tag">資料庫操作</span>
               <span class="hero-side-tag">Linux 環境</span>
             </div>
+          </div>
+
+          <!-- 只顯示 /img/background.jpg 作為背景圖片 -->
+          <div class="hero-image-card">
+            <img src="/img/background.jpg" alt="軟體工程師背景圖片" />
           </div>
         </aside>
       </section>
@@ -701,10 +728,12 @@
         </div>
         <div class="about-body">
           <p>
-            我是周志淮，目前以成為後端工程師為目標，專注在 Java、MySQL、Linux 以及網路相關知識的學習與實作。透過練習專案，我習慣先理解需求，再拆解成可實作的功能，逐步完成並整理紀錄。
+            我是周志淮，目前以成為後端工程師為目標，專注在 Java、MySQL、Linux 以及網路相關知識的學習與實作。
+            透過練習專案，我習慣先理解需求，再拆解成可實作的功能，逐步完成並整理紀錄。
           </p>
           <p>
-            我重視程式碼可讀性與基礎概念，會在練習中反覆調整結構與命名，讓未來維護更容易。也因為有網路與 CCNA 相關背景，對 HTTP、TCP/IP、Routing 等觀念有基本認識，期待能在實務中持續加深。
+            我重視程式碼可讀性與基礎概念，會在練習中反覆調整結構與命名，讓未來維護更容易。
+            也因為有網路與 CCNA 相關背景，對 HTTP、TCP/IP、Routing 等觀念有基本認識，期待能在實務中持續加深。
           </p>
         </div>
       </section>
@@ -717,7 +746,6 @@
           </div>
           <div class="section-subtitle">用具體專案展示後端與資料庫能力</div>
         </div>
-
         <div class="projects-list">
           <article class="project">
             <div class="project-header">
@@ -733,9 +761,19 @@
               </div>
             </div>
             <div class="project-body">
-              <p><strong>專案內容：</strong>練習設計一個簡單的會員管理系統，包含新增、查詢、更新、刪除會員資料等功能，藉由實作熟悉 CRUD 流程與資料表設計。</p>
-              <p><strong>負責內容：</strong>使用 Java 撰寫基本後端邏輯，搭配 MySQL 建立資料表結構與關聯，並撰寫 SQL 來完成資料操作。</p>
-              <p><strong>學到的重點：</strong>更理解資料表欄位與索引設計的重要性，以及在程式邏輯中如何處理例外狀況與錯誤訊息。</p>
+              <p>
+                <strong>專案內容：</strong>
+                練習設計一個簡單的會員管理系統，包含新增、查詢、更新、刪除會員資料等功能，
+                藉由實作熟悉 CRUD 流程與資料表設計。
+              </p>
+              <p>
+                <strong>負責內容：</strong>
+                使用 Java 撰寫基本後端邏輯，搭配 MySQL 建立資料表結構與關聯，並撰寫 SQL 來完成資料操作。
+              </p>
+              <p>
+                <strong>學到的重點：</strong>
+                更理解資料表欄位與索引設計的重要性，以及在程式邏輯中如何處理例外狀況與錯誤訊息。
+              </p>
             </div>
           </article>
 
@@ -755,12 +793,33 @@
               </div>
             </div>
             <div class="project-body">
-              <p><strong>專案內容：</strong>使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，實作新增、查詢、修改、刪除等 CRUD 功能。</p>
-              <p><strong>快取機制設計：</strong>針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，未命中時從 MySQL 讀取並回寫快取，以降低資料庫壓力、提升查詢效能。</p>
-              <p><strong>資料一致性處理：</strong>在更新與刪除資料時同步清除對應快取，避免讀到過期資料，確保 MySQL 與 Redis 資料一致。</p>
-              <p><strong>資料表管理：</strong>支援 TRUNCATE TABLE 全表清空與 ID 重置，並同步清除相關快取資料。</p>
-              <p><strong>環境部署：</strong>使用 Docker Compose 整合 Spring Boot、MySQL 與 Redis，建立可快速部署的開發環境。</p>
-              <p><strong>學習重點：</strong>實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。</p>
+              <p>
+                <strong>專案內容：</strong>
+                使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，
+                實作新增、查詢、修改、刪除等 CRUD 功能。
+              </p>
+              <p>
+                <strong>快取機制設計：</strong>
+                針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，
+                未命中時從 MySQL 讀取並回寫快取，以降低資料庫壓力、提升查詢效能。
+              </p>
+              <p>
+                <strong>資料一致性處理：</strong>
+                在更新與刪除資料時同步清除對應快取，避免讀到過期資料，確保 MySQL 與 Redis 資料一致。
+              </p>
+              <p>
+                <strong>資料表管理：</strong>
+                支援 TRUNCATE TABLE 全表清空與 ID 重置，並同步清除相關快取資料。
+              </p>
+              <p>
+                <strong>環境部署：</strong>
+                使用 Docker Compose 整合 Spring Boot、MySQL 與 Redis，建立可快速部署的開發環境。
+              </p>
+              <p>
+                <strong>學習重點：</strong>
+                實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與容器化部署的理解，
+                也更熟悉如何在真實專案中平衡效能與維護成本。
+              </p>
             </div>
           </article>
 
@@ -778,9 +837,19 @@
               </div>
             </div>
             <div class="project-body">
-              <p><strong>專案內容：</strong>在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，為日後部署後端服務做準備。</p>
-              <p><strong>負責內容：</strong>建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。</p>
-              <p><strong>學到的重點：</strong>更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。</p>
+              <p>
+                <strong>專案內容：</strong>
+                在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，
+                為日後部署後端服務做準備。
+              </p>
+              <p>
+                <strong>負責內容：</strong>
+                建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。
+              </p>
+              <p>
+                <strong>學到的重點：</strong>
+                更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。
+              </p>
             </div>
           </article>
         </div>
@@ -794,43 +863,38 @@
           </div>
           <div class="section-subtitle">以實作經驗為主的技能整理</div>
         </div>
-
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-title">Java</div>
             <div class="skill-sub">基礎語法、OOP、陣列與迴圈</div>
             <div>已完成多個小型練習專案，練習物件導向思維與程式結構拆分。</div>
           </div>
-
           <div class="skill-card">
             <div class="skill-title">MySQL</div>
             <div class="skill-sub">資料表設計與 CRUD 操作</div>
             <div>能撰寫基本 SELECT、INSERT、UPDATE、DELETE，以及簡單的 JOIN 查詢。</div>
           </div>
-
           <div class="skill-card">
             <div class="skill-title">Linux</div>
             <div class="skill-sub">指令操作與基本環境設定</div>
             <div>熟悉常用指令、檔案權限與簡單服務管理，能在終端機中完成基本操作。</div>
           </div>
-
           <div class="skill-card">
             <div class="skill-title">Network / CCNA</div>
             <div class="skill-sub">網路基礎概念</div>
             <div>了解 TCP/IP 架構、Routing 與 Switch 基本運作，對 HTTP 通訊有初步理解。</div>
           </div>
-
           <div class="skill-card">
             <div class="skill-title">Git / 版本控制</div>
             <div class="skill-sub">基本指令與分支操作</div>
             <div>能使用 Git 管理練習專案版本，熟悉 commit、branch 與 push 等操作。</div>
           </div>
-
           <div class="skill-card">
             <div class="skill-title">Docker</div>
             <div class="skill-sub">容器化與環境部署</div>
             <div>熟悉 Docker 基本操作，能使用 Dockerfile 建立映像檔，並搭配容器進行開發與部署。</div>
           </div>
+        </div>
       </section>
 
       <section id="contact" aria-label="Contact">
@@ -841,17 +905,17 @@
           </div>
           <div class="section-subtitle">歡迎聯絡我進一步聊聊</div>
         </div>
-
         <div class="contact-body">
           <p>
-            如果你對我的專案或學習方向有興趣，歡迎透過下列方式聯絡我。非常期待能在實際團隊中累積更多後端開發經驗，也願意從初階任務開始，一步步扎實學習。
+            如果你對我的專案或學習方向有興趣，歡迎透過下列方式聯絡我。
+            非常期待能在實際團隊中累積更多後端開發經驗，也願意從初階任務開始，一步步扎實學習。
           </p>
           <div class="contact-links">
-            <a class="contact-chip" href="mailto:your-email@example.com">
+            <a class="contact-chip" href="mailto:rchih2@gmail.com">
               Email
               <span>rchih2@gmail.com</span>
             </a>
-            <a class="contact-chip" href="https://github.com/你的帳號" target="_blank" rel="noreferrer">
+            <a class="contact-chip" href="https://github.com/rchih2" target="_blank" rel="noreferrer">
               GitHub
               <span>github.com/rchih2</span>
             </a>
@@ -864,8 +928,8 @@
       </section>
 
       <footer>
-        本頁為周志淮的後端工程師求職作品集，內容持續更新中。<br />
-        若有任何建議或機會，歡迎來信聯繫。
+        <p>本頁為周志淮的後端工程師求職作品集，內容持續更新中。</p>
+        <p>若有任何建議或機會，歡迎來信聯繫。</p>
       </footer>
     </div>
   </main>

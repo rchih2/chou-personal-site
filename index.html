@@ -773,7 +773,7 @@
           <!-- 專案 2 -->
           <article class="project">
             <div class="project-header">
-              <div class="project-name">簡易 API 練習（RESTful 概念）</div>
+              <div class="project-name">書籍管理與 Redis 快取優化系統書籍資料 REST API 與快取加速專案</div>
               <div class="project-meta">
                 <span>角色：個人開發</span>
                 <span>類型：學習型專案</span>
@@ -785,15 +785,36 @@
               </div>
             </div>
             <div class="project-body">
-              <p>
-                <strong>專案內容：</strong>透過撰寫簡單的 API 介面，練習處理請求、回傳 JSON 資料，並理解 HTTP 方法（GET / POST / PUT / DELETE）的使用情境。
-              </p>
-              <p>
-                <strong>負責內容：</strong>設計基本的 API 結構，實作參數驗證與錯誤訊息格式，讓回應內容更一致且容易除錯。
-              </p>
-              <p>
-                <strong>學到的重點：</strong>建立起對 RESTful API 的初步認識，了解不同 HTTP 方法在資源操作上的差異。
-              </p>
+         <p>
+  <strong>專案內容：</strong>
+  使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，
+  實作新增、查詢、修改、刪除等 CRUD 功能，讓前端或其他服務可以透過 HTTP 介面管理書籍資料。 
+</p>
+<p>
+  <strong>快取機制設計：</strong>
+  針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，
+  未命中時改從 MySQL 取回資料並回寫快取，以降低資料庫壓力、提升查詢效能。 [web:25][web:24]
+</p>
+<p>
+  <strong>資料一致性處理：</strong>
+  在更新與刪除書籍資料時同步清除對應的 Redis 快取，避免讀到過期資料，
+  確保 MySQL 與快取中的內容維持一致。 [web:24][web:31]
+</p>
+<p>
+  <strong>資料表管理：</strong>
+  支援 TRUNCATE TABLE 進行全表清空與主鍵 ID 重置，並在執行時同步清除相關快取資料，
+  讓資料庫與快取狀態保持乾淨一致。 [web:32][web:29]
+</p>
+<p>
+  <strong>環境部署：</strong>
+  使用 Docker Compose 整合 Spring Boot 應用程式、MySQL 與 Redis 容器，
+  建立一套一鍵啟動的開發環境，方便在不同機器上快速佈署與測試。 [web:30][web:33]
+</p>
+<p>
+  <strong>學習重點：</strong>
+  實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與
+  容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。 [web:25][web:31][web:30]
+</p>
             </div>
           </article>
 

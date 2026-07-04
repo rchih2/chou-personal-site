@@ -143,7 +143,6 @@
       box-shadow: 0 14px 35px rgba(56, 189, 248, 0.5);
     }
 
-    /* hero */
     .hero {
       display: grid;
       grid-template-columns: 3fr 2.3fr;
@@ -314,7 +313,6 @@
       background: rgba(148, 163, 184, 0.5);
     }
 
-    /* side card */
     .hero-side {
       border-radius: 24px;
       padding: 18px 18px 16px;
@@ -369,7 +367,6 @@
       background: rgba(15, 23, 42, 0.9);
     }
 
-    /* sections */
     section {
       border-radius: 22px;
       padding: 20px 20px 18px;
@@ -411,14 +408,12 @@
       color: var(--text-sub);
     }
 
-    /* about */
     .about-body {
       font-size: 14px;
       color: var(--text-sub);
       line-height: 1.7;
     }
 
-    /* projects */
     .projects-list {
       display: flex;
       flex-direction: column;
@@ -487,7 +482,6 @@
       font-weight: 500;
     }
 
-    /* skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -517,7 +511,6 @@
       font-size: 11px;
     }
 
-    /* contact */
     .contact-body {
       font-size: 13px;
       color: var(--text-sub);
@@ -563,7 +556,6 @@
       text-underline-offset: 2px;
     }
 
-    /* responsive */
     @media (max-width: 840px) {
       main {
         padding-top: 20px;
@@ -627,7 +619,6 @@
 <body>
   <main>
     <div class="shell">
-      <!-- 頂部導覽 -->
       <header>
         <div class="brand">
           <div class="brand-avatar">C</div>
@@ -644,16 +635,13 @@
         </nav>
       </header>
 
-      <!-- 首屏 Hero -->
       <section class="hero" aria-label="Hero">
         <div class="hero-main">
           <div class="hero-kicker">
             <div class="hero-kicker-dot">IN</div>
             <span>轉職中 · Backend Developer</span>
           </div>
-          <h1 class="hero-title">
-            Java 後端工程師｜Chou 的求職作品集
-          </h1>
+          <h1 class="hero-title">Java 後端工程師｜Chou 的求職作品集</h1>
           <p class="hero-subtitle">
             正在累積 Java、資料庫與 Linux 實作經驗，透過具體專案練習 API、資料表設計與基礎部署，希望加入團隊一起打造穩定好維護的後端服務。
           </p>
@@ -676,14 +664,8 @@
           </div>
 
           <div class="hero-meta">
-            <span>
-              <dot></dot>
-              對後端、系統與網路有高度興趣
-            </span>
-            <span>
-              <dot></dot>
-              持續學習並整理成作品集
-            </span>
+            <span><dot></dot> 對後端、系統與網路有高度興趣</span>
+            <span><dot></dot> 持續學習並整理成作品集</span>
           </div>
         </div>
 
@@ -709,16 +691,13 @@
         </aside>
       </section>
 
-      <!-- 關於我 -->
       <section id="about" aria-label="About">
         <div class="section-header">
           <div class="section-title">
             <span class="section-title-dot"></span>
             關於我
           </div>
-          <div class="section-subtitle">
-            簡短說明背景與學習方向
-          </div>
+          <div class="section-subtitle">簡短說明背景與學習方向</div>
         </div>
         <div class="about-body">
           <p>
@@ -730,20 +709,16 @@
         </div>
       </section>
 
-      <!-- 專案作品 -->
       <section id="projects" aria-label="Projects">
         <div class="section-header">
           <div class="section-title">
             <span class="section-title-dot"></span>
             專案作品
           </div>
-          <div class="section-subtitle">
-            用具體專案展示後端與資料庫能力
-          </div>
+          <div class="section-subtitle">用具體專案展示後端與資料庫能力</div>
         </div>
 
         <div class="projects-list">
-          <!-- 專案 1 -->
           <article class="project">
             <div class="project-header">
               <div class="project-name">會員管理系統（練習專案）</div>
@@ -758,19 +733,12 @@
               </div>
             </div>
             <div class="project-body">
-              <p>
-                <strong>專案內容：</strong>練習設計一個簡單的會員管理系統，包含新增、查詢、更新、刪除會員資料等功能，藉由實作熟悉 CRUD 流程與資料表設計。
-              </p>
-              <p>
-                <strong>負責內容：</strong>使用 Java 撰寫基本後端邏輯，搭配 MySQL 建立資料表結構與關聯，並撰寫 SQL 來完成資料操作。
-              </p>
-              <p>
-                <strong>學到的重點：</strong>更理解資料表欄位與索引設計的重要性，以及在程式邏輯中如何處理例外狀況與錯誤訊息。
-              </p>
+              <p><strong>專案內容：</strong>練習設計一個簡單的會員管理系統，包含新增、查詢、更新、刪除會員資料等功能，藉由實作熟悉 CRUD 流程與資料表設計。</p>
+              <p><strong>負責內容：</strong>使用 Java 撰寫基本後端邏輯，搭配 MySQL 建立資料表結構與關聯，並撰寫 SQL 來完成資料操作。</p>
+              <p><strong>學到的重點：</strong>更理解資料表欄位與索引設計的重要性，以及在程式邏輯中如何處理例外狀況與錯誤訊息。</p>
             </div>
           </article>
 
-          <!-- 專案 2 -->
           <article class="project">
             <div class="project-header">
               <div class="project-name">書籍管理 REST API 與 Redis 快取優化系統</div>
@@ -779,48 +747,23 @@
                 <span>類型：學習型專案</span>
               </div>
               <div class="project-tags">
-                <span class="project-tag">Java</span>
                 <span class="project-tag">Spring Boot</span>
                 <span class="project-tag">Spring Data JPA</span>
                 <span class="project-tag">Redis</span>
+                <span class="project-tag">MySQL</span>
                 <span class="project-tag">Docker Compose</span>
               </div>
             </div>
             <div class="project-body">
-              <p>
-                <strong>專案內容：</strong>
-                使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，
-                實作新增、查詢、修改、刪除等 CRUD 功能，讓前端或其他服務可以透過 HTTP 介面管理書籍資料。 [web:24][web:25]
-              </p>
-              <p>
-                <strong>快取機制設計：</strong>
-                針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，
-                未命中時改從 MySQL 取回資料並回寫快取，以降低資料庫壓力、提升查詢效能。 [web:25][web:24]
-              </p>
-              <p>
-                <strong>資料一致性處理：</strong>
-                在更新與刪除書籍資料時同步清除對應的 Redis 快取，避免讀到過期資料，
-                確保 MySQL 與快取中的內容維持一致。 [web:24][web:31]
-              </p>
-              <p>
-                <strong>資料表管理：</strong>
-                支援 TRUNCATE TABLE 進行全表清空與主鍵 ID 重置，並在執行時同步清除相關快取資料，
-                讓資料庫與快取狀態保持乾淨一致。 [web:32][web:29]
-              </p>
-              <p>
-                <strong>環境部署：</strong>
-                使用 Docker Compose 整合 Spring Boot 應用程式、MySQL 與 Redis 容器，
-                建立一套一鍵啟動的開發環境，方便在不同機器上快速佈署與測試。 [web:30][web:33]
-              </p>
-              <p>
-                <strong>學習重點：</strong>
-                實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與
-                容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。 [web:25][web:31][web:30]
-              </p>
+              <p><strong>專案內容：</strong>使用 Spring Boot、Spring Data JPA 與 Redis 建立書籍管理 REST API，實作新增、查詢、修改、刪除等 CRUD 功能。</p>
+              <p><strong>快取機制設計：</strong>針對單筆查詢導入 Redis Cache-Aside 策略，查詢時優先讀取 Redis，未命中時從 MySQL 讀取並回寫快取，以降低資料庫壓力、提升查詢效能。</p>
+              <p><strong>資料一致性處理：</strong>在更新與刪除資料時同步清除對應快取，避免讀到過期資料，確保 MySQL 與 Redis 資料一致。</p>
+              <p><strong>資料表管理：</strong>支援 TRUNCATE TABLE 全表清空與 ID 重置，並同步清除相關快取資料。</p>
+              <p><strong>環境部署：</strong>使用 Docker Compose 整合 Spring Boot、MySQL 與 Redis，建立可快速部署的開發環境。</p>
+              <p><strong>學習重點：</strong>實作過程中強化了對 RESTful API 設計、快取策略（Cache-Aside）、資料一致性與容器化部署的理解，也更熟悉如何在真實專案中平衡效能與維護成本。</p>
             </div>
           </article>
 
-          <!-- 專案 3 -->
           <article class="project">
             <div class="project-header">
               <div class="project-name">Linux 環境練習（部署與指令）</div>
@@ -835,93 +778,69 @@
               </div>
             </div>
             <div class="project-body">
-              <p>
-                <strong>專案內容：</strong>在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，為日後部署後端服務做準備。 [web:30]
-              </p>
-              <p>
-                <strong>負責內容：</strong>建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。 [web:30]
-              </p>
-              <p>
-                <strong>學到的重點：</strong>更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。 [web:30]
-              </p>
+              <p><strong>專案內容：</strong>在 Linux 環境中練習基本指令操作、檔案權限設定，以及簡單的服務啟動與管理，為日後部署後端服務做準備。</p>
+              <p><strong>負責內容：</strong>建立使用者、設定檔案權限、安裝必要套件，並撰寫簡單腳本協助操作。</p>
+              <p><strong>學到的重點：</strong>更熟悉命令列操作與系統結構，理解檔案權限與服務管理對系統穩定性的影響。</p>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- 技能 -->
       <section id="skills" aria-label="Skills">
         <div class="section-header">
           <div class="section-title">
             <span class="section-title-dot"></span>
             技能與學習重點
           </div>
-          <div class="section-subtitle">
-            以實作經驗為主的技能整理
-          </div>
+          <div class="section-subtitle">以實作經驗為主的技能整理</div>
         </div>
 
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-title">Java</div>
             <div class="skill-sub">基礎語法、OOP、陣列與迴圈</div>
-            <div>
-              已完成多個小型練習專案，練習物件導向思維與程式結構拆分。
-            </div>
+            <div>已完成多個小型練習專案，練習物件導向思維與程式結構拆分。</div>
           </div>
 
           <div class="skill-card">
             <div class="skill-title">MySQL</div>
             <div class="skill-sub">資料表設計與 CRUD 操作</div>
-            <div>
-              能撰寫基本 SELECT、INSERT、UPDATE、DELETE，以及簡單的 JOIN 查詢。
-            </div>
+            <div>能撰寫基本 SELECT、INSERT、UPDATE、DELETE，以及簡單的 JOIN 查詢。</div>
           </div>
 
           <div class="skill-card">
             <div class="skill-title">Linux</div>
             <div class="skill-sub">指令操作與基本環境設定</div>
-            <div>
-              熟悉常用指令、檔案權限與簡單服務管理，能在終端機中完成基本操作。
-            </div>
+            <div>熟悉常用指令、檔案權限與簡單服務管理，能在終端機中完成基本操作。</div>
           </div>
 
           <div class="skill-card">
             <div class="skill-title">Network / CCNA</div>
             <div class="skill-sub">網路基礎概念</div>
-            <div>
-              了解 TCP/IP 架構、Routing 與 Switch 基本運作，對 HTTP 通訊有初步理解。 [web:19]
-            </div>
+            <div>了解 TCP/IP 架構、Routing 與 Switch 基本運作，對 HTTP 通訊有初步理解。</div>
           </div>
 
           <div class="skill-card">
             <div class="skill-title">Git / 版本控制</div>
             <div class="skill-sub">基本指令與分支操作</div>
-            <div>
-              能使用 Git 管理練習專案版本，熟悉 commit、branch 與 push 等操作。 [page:23]
-            </div>
+            <div>能使用 Git 管理練習專案版本，熟悉 commit、branch 與 push 等操作。</div>
           </div>
 
           <div class="skill-card">
             <div class="skill-title">持續學習</div>
             <div class="skill-sub">紀錄與反思</div>
-            <div>
-              會將每次練習的重點整理成筆記，回頭檢查觀念與程式結構是否可以再優化。
-            </div>
+            <div>會將每次練習的重點整理成筆記，回頭檢查觀念與程式結構是否可以再優化。</div>
           </div>
         </div>
       </section>
 
-      <!-- 聯絡方式 -->
       <section id="contact" aria-label="Contact">
         <div class="section-header">
           <div class="section-title">
             <span class="section-title-dot"></span>
             聯絡我
           </div>
-          <div class="section-subtitle">
-            歡迎聯絡我進一步聊聊
-          </div>
+          <div class="section-subtitle">歡迎聯絡我進一步聊聊</div>
         </div>
 
         <div class="contact-body">
